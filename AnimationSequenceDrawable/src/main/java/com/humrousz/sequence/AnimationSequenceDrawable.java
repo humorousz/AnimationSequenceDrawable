@@ -370,6 +370,8 @@ public class AnimationSequenceDrawable extends Drawable implements Animatable, R
         } else if (restart || changed) {
             stop();
             start();
+        } else if(!isRunning() && visible){
+            start();
         }
         return changed;
     }
