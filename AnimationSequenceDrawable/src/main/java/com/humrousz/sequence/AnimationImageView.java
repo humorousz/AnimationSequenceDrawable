@@ -90,7 +90,6 @@ public class AnimationImageView extends AppCompatImageView {
                 }
             }
         };
-        mSequenceFactory = new FrescoSequence.FrescoWebpSequenceFactory();
         if (attrs != null) {
             TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.AnimationImageView);
             mLoopCount = attributes.getInt(R.styleable.AnimationImageView_loopCount, -1);
@@ -101,6 +100,8 @@ public class AnimationImageView extends AppCompatImageView {
                 //not set loop count so loop mode is set value default LOOP_DEFAULT
                 mLoopBehavior = attributes.getInt(R.styleable.AnimationImageView_loopBehavior, AnimationSequenceDrawable.LOOP_DEFAULT);
             }
+            int srcType = attributes.getInt(R.styleable.AnimationImageView_srcType,1);
+            mSequenceFactory = FrescoSequence.getSequenceFactory(srcType);
             attributes.recycle();
 
             int srcId = attrs.getAttributeResourceValue(ANDROID_NS, "src", 0);

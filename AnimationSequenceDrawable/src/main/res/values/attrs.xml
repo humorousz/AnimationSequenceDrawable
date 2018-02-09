@@ -8,5 +8,9 @@
             <flag name="loop_default" value="3"/>
 
         </attr>
+        <attr name="srcType" >
+            <flag name="webp" value="1"/>
+            <flag name="gif" value="2"/>
+        </attr>
     </declare-styleable>
 </resources>

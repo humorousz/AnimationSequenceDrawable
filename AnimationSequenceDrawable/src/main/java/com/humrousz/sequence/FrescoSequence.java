@@ -96,5 +96,13 @@ public class FrescoSequence extends BaseAnimationSequence {
         }
     }
 
+    public static BaseSequenceFactory getSequenceFactory(int srcType ){
+        if(srcType == GIF) {
+            return new FrescoGifSequenceFactory();
+        }else {
+            return new FrescoWebpSequenceFactory();
+        }
+    }
+
 
 }
