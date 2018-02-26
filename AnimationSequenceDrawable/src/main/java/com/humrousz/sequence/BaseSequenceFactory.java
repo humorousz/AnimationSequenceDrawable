@@ -13,5 +13,5 @@ abstract public class BaseSequenceFactory {
      * @param inputStream
      * @return
      */
-    abstract BaseAnimationSequence createSequence(InputStream inputStream);
+     abstract public BaseAnimationSequence createSequence(InputStream inputStream);
 }
