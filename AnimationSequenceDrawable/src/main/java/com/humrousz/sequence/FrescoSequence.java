@@ -84,14 +84,14 @@ public class FrescoSequence extends BaseAnimationSequence {
 
     public static class FrescoWebpSequenceFactory extends BaseSequenceFactory {
         @Override
-        BaseAnimationSequence createSequence(InputStream inputStream) {
+        public BaseAnimationSequence createSequence(InputStream inputStream) {
             return decodeStream(inputStream,WEBP);
         }
     }
 
     public static class FrescoGifSequenceFactory extends BaseSequenceFactory {
         @Override
-        BaseAnimationSequence createSequence(InputStream inputStream) {
+        public BaseAnimationSequence createSequence(InputStream inputStream) {
             return decodeStream(inputStream,GIF);
         }
     }
