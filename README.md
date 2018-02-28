@@ -2,6 +2,24 @@
 ## 介绍
 根据[Google FrameSequenceDrawable](https://github.com/humorousz/FrameSequenceDrawable)的思想，抽象了Sequence并且使用了Facebook的Fresco中的animated-webp解析Webp文件，因为抽象了Sequence所以可以根据很少的替换来实现AnimationSequenceDrawable可以同时满足webp和gif图片的需求
 [一个如何使用的小例子](https://github.com/humorousz/AnimationSequence)
+## 如何引入到工程
+-  Add the JitPack repository to your build file
+``` gradle
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+- Add the dependency
+ ``` gradle
+	dependencies {
+	        compile 'com.github.humorousz:AnimationSequenceDrawable:1.0.1-SNAPSHOT'
+	}
+
+ ```
 ## 如何使用
 #### 使用webp
 - xml
