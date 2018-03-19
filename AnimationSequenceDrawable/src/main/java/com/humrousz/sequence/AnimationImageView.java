@@ -225,6 +225,7 @@ public class AnimationImageView extends AppCompatImageView {
                 return true;
             } catch (Exception e) {
                 //ignored
+                e.printStackTrace();
             }
         }
         return false;

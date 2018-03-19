@@ -41,7 +41,7 @@ abstract public class BaseAnimationSequence {
      * @param frameNr
      * @param output
      * @param previousFrameNr
-     * @return
+     * @return previousFrame duration
      */
     abstract public long getFrame(int frameNr, Bitmap output, int previousFrameNr);
 

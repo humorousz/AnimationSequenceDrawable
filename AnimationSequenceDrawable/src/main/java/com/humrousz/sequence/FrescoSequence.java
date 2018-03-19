@@ -43,7 +43,8 @@ public class FrescoSequence extends BaseAnimationSequence {
     public long getFrame(int frameNr, Bitmap output, int previousFrameNr) {
         AnimatedImageFrame frame =  mWebpImage.getFrame(frameNr);
         frame.renderFrame(mWebpImage.getWidth(),mWebpImage.getHeight(),output);
-        return frame.getDurationMs();
+        int lastFrame = (frameNr + mWebpImage.getFrameCount() - 1) % mWebpImage.getFrameCount();
+        return mWebpImage.getFrame(lastFrame).getDurationMs();
     }
 
     @Override
